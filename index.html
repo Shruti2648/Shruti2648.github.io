@@ -15,7 +15,8 @@
   <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
   <link href="css/resume.css" rel="stylesheet">
-
+  <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
+  <script type="text/javascript" src="js/portfolio-submissions.js"></script>
 </head>
 
 <body id="page-top">
@@ -56,7 +57,10 @@
         <div class="subheading mb-5">(201) 233-2631 ·
           <a href="mailto:name@email.com">jadhavjshruti@gmail.com</a>
         </div>
-        <p class="lead mb-5">Beginner full stack web developer with a background in public health and a lifelong dedication to learning.</p>
+        <p class="lead mb-5">
+          My name is Shruti and I'm a full stack web developer with a background in public health and a lifelong dedication to learning. 
+          Please feel free to check out some of my work, send me an email, and connect with me on LinkedIn!
+        </p>
         <div class="social-icons">
           <a href="https://www.linkedin.com/in/shrutijadhav64/" target="_blank">
             <i class="fab fa-linkedin-in"></i>
@@ -76,6 +80,14 @@
         
         <div class="row ml-5">
         <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="img/gold-star.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Gold Star</h5>
+            <a href="http://getagoldstar.herokuapp.com" target="_blank" class="card-title">Gamify your productivity by earning gold stars for completing tasks!</a>
+          </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
           <img class="card-img-top" src="img/zodiac.jpg" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">Zodiac and Horoscope Finder</h5>
@@ -90,7 +102,9 @@
             <a href="https://shruti2648.github.io/New-York-Times-Search/?" target="_blank" class="card-title">Quickly and easily search for articles in the New York Times.</a>
           </div>
         </div>
+      </div>
 
+      <div class="row ml-5">
       <div class="card" style="width: 18rem;">
         <img class="card-img-top" src="img/giftastic.jpg" alt="Card image cap">
         <div class="card-body">
@@ -98,33 +112,23 @@
           <a href="https://shruti2648.github.io/GifTastic/" target="_blank" class="card-title">Your one-stop shop for cute animal GIFs!</a>
         </div>
       </div>
-    </div>
 
-    <div class="row ml-5">
-        <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="img/psychic.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Psychic Game</h5>
-            <a href="https://shruti2648.github.io/Psychic-Game/" target="_blank" class="card-title">Try to guess which letter I'm thinking of!</a>
-          </div>
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="img/crystal-image.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Crystal Collector Game</h5>
+          <a href="https://shruti2648.github.io/Unit-4-Game/" target="_blank" class="card-title">Figure out the crystals' hidden values to reach the target number.</a>
         </div>
-        
-        <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="img/crystal-image.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Crystal Collector Game</h5>
-            <a href="https://shruti2648.github.io/Unit-4-Game/" target="_blank" class="card-title">Figure out the crystals' hidden values to reach the target number.</a>
-          </div>
-        </div>
+      </div>
 
-        <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="img/rps-image-1.png" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Rock Paper Scissors Game</h5>
-            <a href="https://shruti2648.github.io/Rock-Paper-Scissors-Game/" target="_blank" class="card-title">Can you beat me at rock paper scissors?</a>
-          </div>
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="img/rps-image-1.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Rock Paper Scissors Game</h5>
+          <a href="https://shruti2648.github.io/Rock-Paper-Scissors-Game/" target="_blank" class="card-title">Can you beat me at rock paper scissors?</a>
         </div>
-        </div>
+      </div>
+      </div>
     </div>
 
     </section>
@@ -139,17 +143,17 @@
           <form>
               <div class="form-group">
                   <label for="exampleInputEmail1">Name</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter name">
+                  <input type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter name">
               </div>
               <div class="form-group">
                   <label for="exampleInputEmail1">E-mail address</label>
-                  <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                  <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
               </div>
               <div class="form-group">
                   <label for="exampleFormControlTextarea1">Message</label>
-                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  <textarea class="form-control" id="message" rows="3"></textarea>
               </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="submit" class="btn btn-primary" id="submit-button">Submit</button>
           </form>
       </div>
 
